@@ -12,4 +12,6 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= stub particles.min.js
+//= stub particles_setting.js
 //= require_tree .
