@@ -1,112 +1,56 @@
 particlesJS("particles-js", {
   "particles": {
     "number": {
-      "value": 80,
+      "value": 100, //シェイプの数
       "density": {
         "enable": true,
-        "value_area": 800
+        "value_area": 700 //シェイプの密集度
       }
     },
     "color": {
-      "value": "#000000"
+      "value": "#0A0A0A" //シェイプの色
     },
     "shape": {
-      "type": "circle",
-      "stroke": {
-        "width": 0,
-        "color": "#fff"
-      },
-      "polygon": {
-        "nb_sides": 5
-      },
-      "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
-      }
+      "type": "circle", //シェイプの形
     },
+    //シェイプの透過度の設定
     "opacity": {
-      "value": 0.5,
-      "random": false,
-      "anim": {
-        "enable": false,
-        "speed": 1,
-        "opacity_min": 0.1,
-        "sync": false
-      }
+      "value": 0.7,
     },
+    //シェイプの大きさの部分
     "size": {
-      "value": 2,
+      "value": 4,
       "random": true,
-      "anim": {
-        "enable": false,
-        "speed": 40,
-        "size_min": 0.1,
-        "sync": false
-      }
     },
+    //繋がる線の部分
     "line_linked": {
       "enable": true,
-      "distance": 150,
+      "distance": 100,
       "color": "#000000",
-      "opacity": 0.4,
-      "width": 1
+      "opacity": 0.5,
+      "width": 0.8
     },
+    //全体の動き
     "move": {
       "enable": true,
-      "speed": 2,
+      "speed": 3,
       "direction": "none",
       "random": false,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false,
-      "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
-      }
+      "out_mode": "bounce",
+      "bounce": true,
     }
   },
+  //event設定
   "interactivity": {
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": true,
-        "mode": "grab"
+        "enable": false,
       },
       "onclick": {
-        "enable": true,
-        "mode": "push"
+        "enable": false,
       },
-      "resize": true
     },
-    "modes": {
-      "grab": {
-        "distance": 150,
-        "line_linked": {
-          "opacity": 1
-        }
-      },
-      "bubble": {
-        "distance": 400,
-        "size": 40,
-        "duration": 2,
-        "opacity": 8,
-        "speed": 3
-      },
-      "repulse": {
-        "distance": 200,
-        "duration": 0.4
-      },
-      "push": {
-        "particles_nb": 4
-      },
-      "remove": {
-        "particles_nb": 2
-      }
-    }
   },
   "retina_detect": true
 });
-
-requestAnimationFrame();
