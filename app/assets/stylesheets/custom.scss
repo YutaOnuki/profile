@@ -4,3 +4,32 @@
   height: 100%;
   z-index: -1;
 }
+
+.box{}
+.media{}
+.media-content{}
+.content{}
+.timeline{
+  list-style: none !important;
+}
+.timeline-date{
+  width: 20%;
+  margin-right: 15px;
+  float: left;
+}
+.timeline-content{
+  border-left: 5px #81F7F3 solid;
+  width: 70%;
+  float: left;
+  position: relative;
+  p{
+    margin: 15px 0 15px 15px;
+  }
+}
+.timeline-content:before{
+  content: "\2022";
+  color: #F4FA58;
+  font-size: 50px;
+  position: absolute;
+  left: -13px;
+}
