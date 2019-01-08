@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  
   <body>
-    <%= yield %>
-    <div id="particles-js"></div>
+    <div id="particles-js">
+      <%= yield %>
+    </div>
     <%= javascript_include_tag "particles.min.js" %>
     <%= javascript_include_tag "particles_setting.js" %>
   </body>

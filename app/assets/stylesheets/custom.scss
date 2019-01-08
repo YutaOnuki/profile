@@ -1,39 +1,56 @@
 #particles-js{
-  position: fixed;
-  width: 100%;
-  height: 100%;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden
 }
-
-div{
-  position: fixed;
-  width: 100%;
-  height: 100%;
+.columns{
+  position: absolute;
+  width:100%;
+  top: 5%;
+  left: 5%;
+  padding-bottom: 100px;
 }
-
-.box{}
-.media{}
-.media-content{}
-.content{}
 .timeline{
   list-style: none !important;
-}
-.timeline-date{
-  width: 20%;
-  margin-right: 15px;
-  float: left;
-}
-.timeline-content{
-  border-left: 5px #81F7F3 solid;
-  width: 70%;
-  float: left;
-  position: relative;
-  p{
-    margin: 15px 0 15px 15px;
+  .timeline-date{
+    width: 20%;
+    margin-right: 15px;
+    float: left;
+  }
+  .timeline-content{
+    border-left: 5px rgba(0, 0, 0, 0.5) solid;
+    width: 70%;
+    float: left;
+    position: relative;
+    p{
+      margin: 15px 0 15px 15px;
+    }
+    .timeline-thema{
+      width: 30%;
+      margin-left: 50px;
+      strong{
+        cursor: pointer;
+      }
+    }
+    .hidden-timeline{
+      display: none;
+      .close-timeline{
+        display: inline-block;
+        margin-top: 0;
+      }
+      .close-timeline:hover{
+        cursor: pointer;
+      }
+      p{
+        margin-left: 100px;
+      }
+    }
   }
 }
 .timeline-content:before{
   content: "\2022";
-  color: #F4FA58;
+  color: rgb(25,25,255,);
   font-size: 50px;
   position: absolute;
   left: -13px;
