@@ -22,6 +22,8 @@
     width: 70%;
     float: left;
     position: relative;
+    border-image: linear-gradient(90deg, #fc6076 33%, #ff9a44 66%);
+    border-image-slice: 1;
     p{
       margin: 15px 0 15px 15px;
     }
