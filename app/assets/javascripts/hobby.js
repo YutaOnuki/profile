@@ -1,4 +1,4 @@
-function showHobby(hobby){
-  document.getElementById("hobby").style.display = "block";
-  return false;
+function popupHobby() {
+  var popup = document.getElementById('popup-hobby');
+  popup.classList.toggle('show-hobby');
 };

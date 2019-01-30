@@ -38,13 +38,14 @@
         <tr>
           <td></td>
           <td>
-            <p onclick="showHobby(baseball)">野球</p>
+            <p onclick="popupHobby()">野球</p>
           </td>
-          <td>
-            <div id="baseball" class="hidden-hobby">
-              <p>テストです</p>
+          <div class="hobby" id="popup-hobby">
+            <div class="hobby-inner">
+              <div class="close-btn" onclick="popupHobby()"><i class="fas fa-times"></i></div>
             </div>
-          </td>
+            <div class="black-background" onclick="popupHobby()"></div>
+          </div>
         </tr>
         <tr>
           <td></td>
