@@ -31,33 +31,63 @@
         </tr>
         <tr>
           <td>Hobby:</td>
+          <div class="basketball" id="popup-basketball">
+            <div class="hobby-inner">
+              <div class="close-btn" onclick="popupHobby(basketball)"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="black-background" onclick="popupHobby(basketball)"></div>
+          </div>
           <td>
-            <p id="hobby">バスケットボール</p>
+            <a href="#modal-1" data-modal-open>バスケットボール</a>
           </td>
         </tr>
         <tr>
           <td></td>
           <td>
-            <p onclick="popupHobby()">野球</p>
+            <p onclick="popupHobby(baseball)">野球</p>
           </td>
-          <div class="hobby" id="popup-hobby">
+          <div class="baseball" id="popup-baseball">
             <div class="hobby-inner">
-              <div class="close-btn" onclick="popupHobby()"><i class="fas fa-times"></i></div>
+              <div class="close-btn" onclick="popupHobby(baseball)"><i class="fas fa-times"></i></div>
             </div>
-            <div class="black-background" onclick="popupHobby()"></div>
+            <div class="black-background" onclick="popupHobby(baseball)"></div>
           </div>
         </tr>
         <tr>
           <td></td>
-          <td><p id="hobby">ギター</p></td>
+          <td>
+            <p onclick="popupHobby(guiter)">ギター</p>
+          </td>
+          <div class="guiter" id="popup-guiter">
+            <div class="hobby-inner">
+              <div class="close-btn" onclick="popupHobby(guiter)"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="black-background" onclick="popupHobby(guiter)"></div>
+          </div>
         </tr>
         <tr>
           <td></td>
-          <td><p id="hobby">音楽鑑賞</p></td>
+          <td>
+            <p onclick="popupHobby(music)">音楽鑑賞</p>
+          </td>
+          <div class="music" id="popup-music">
+            <div class="hobby-inner">
+              <div class="close-btn" onclick="popupHobby(music)"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="black-background" onclick="popupHobby(music)"></div>
+          </div>
         </tr>
         <tr>
           <td></td>
-          <td><p id="hobby">特撮鑑賞</p></td>
+          <td>
+            <p onclick="popupHobby(sfx)">特撮</p>
+          </td>
+          <div class="sfx" id="popup-sfx">
+            <div class="hobby-inner">
+              <div class="close-btn" onclick="popupHobby(sfx)"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="black-background" onclick="popupHobby(sfx)"></div>
+          </div>
         </tr>
         <tr>
           <th colspan="1"></th>
@@ -65,9 +95,40 @@
         </tr>
       </table>
     </div>
-    <br>
-    <div class="buttons has-addons is-centered">
-      <a href="#" class="button is-link">Github</a>
+
+    <div class="modal-links">
+      <ul>
+        <li>
+          <a href="#modal-1" data-modal-open>One Prodigious Cat</a>
+        </li>
+        <li>
+          <a href="#modal-2" data-modal-open>One More Prodigious Cat</a>
+        </li>
+        <li>
+          <a href="#modal-3" data-modal-open>Example Website</a>
+        </li>
+      </ul>
     </div>
-  </div>
-</div>
+
+    <div id="modal-1" style="display:none">
+      <div>
+       <h1>test</h1>
+      </div>
+    </div>
+
+    <div id="modal-2" style="display:none">
+      <img src="http://www.gifbin.com/bin/032014/1395614704_cat_vs_steam.gif" width="396" height="275" alt="Almost Caught It.">
+    </div>
+
+    <div id="modal-3" style="display:none">
+      <iframe src="http://example.com" width="360" height="576" frameborder="0"></iframe>
+    </div>
+
+    <div class="modal">
+      <div class="modal-inner" style="width: 70%; height: 40%;">
+        <span data-modal-close><i class="fas fa-times"></i></span>
+        <div class="modal-content"></div>
+      </div>
+    </div>
+
+    <script>var modal = new VanillaModal.default();</script>
