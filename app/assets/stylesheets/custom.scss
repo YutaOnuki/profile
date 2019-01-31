@@ -56,7 +56,7 @@
   position: absolute;
   left: -13px;
 }
-.hobby {
+.basketball, .baseball, .guiter, .music, .sfx{
   position: fixed;
   left: 0;
   top: 0;
@@ -67,11 +67,11 @@
   visibility: hidden;
   transition: .6s;
 }
-.hobby.show-hobby {
+.basketball.show-hobby .baseball.show-hobby .guiter.show-hobby .music.show-hobby .sfx.show-hobby{
   opacity: 1;
   visibility: visible;
 }
-.hobby-inner {
+.hobby-inner{
   position: absolute;
   left: 50%;
   top: 50%;
@@ -82,7 +82,7 @@
   background-color: #fff;
   z-index: 2;
 }
-.close-btn {
+.close-btn{
   position: absolute;
   right: 0;
   top: 0;
@@ -105,4 +105,84 @@
   background-color: rgba(0,0,0,.8);
   z-index: 1;
   cursor: pointer;
+}
+
+.modal {
+  display: none;
+}
+
+.vanilla-modal .modal {
+  display: block;
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.2s, z-index 0s 0.2s;
+  text-align: center;
+  overflow: hidden;
+  overflow-y: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.vanilla-modal .modal > * {
+  display: inline-block;
+  white-space: normal;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.vanilla-modal .modal:before {
+  display: inline-block;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  vertical-align: middle;
+  content: "";
+}
+
+.vanilla-modal.modal-visible .modal {
+  z-index: 99;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.modal-inner {
+  position: relative;
+  overflow: hidden;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #fff;
+  z-index: -1;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s, transform 0.2s, z-index 0s 0.2s;
+}
+.modal-visible .modal-inner {
+  z-index: 100;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+[data-modal-close] {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: center;
+  background: #fff;
+  box-shadow: -1px 1px 2px rgba(0,0,0,0.2);
 }
