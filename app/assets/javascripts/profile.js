@@ -5,4 +5,4 @@ function openTimeline(open_num){
  function closeTimeline(close_num){
   document.getElementById("OpenTimeline" + close_num).style.display = "none";
   return false;
-  }
+   }
