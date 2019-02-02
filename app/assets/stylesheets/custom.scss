@@ -1,69 +1,25 @@
+$bg: white;
+$black: #4a4a4a;
+$blue: #53a1eb;
+
+/* 背景js */
+
 #particles-js{
   position: relative;
   width: 100vw;
   height: 2600px;
   overflow: hidden
 }
+
+/* 全体レイアウト */
 .columns{
   position: absolute;
   width:90%;
   top: 5%;
   left: 5%;
 }
-//.timeline{
-//  list-style: none !important;
-//  .timeline-date{
-//    width: 20%;
-//    margin-right: 15px;
-//    float: left;
-//  }
-//  .timeline-content{
-//    border-left: 5px rgba(0, 0, 0, 0.5) solid;
-//    width: 70%;
-//    float: left;
-//    position: relative;
-//    border-image: linear-gradient(90deg, #4a4a4a 33%, #4a4a4a 66%);
-//    border-image-slice: 1;
-//    p{
-//      margin: 15px 0 15px 15px;
-//    }
-//    .timeline-thema{
-//      width: 30%;
-//      margin-left: 50px;
-//      strong{
-//        cursor: pointer;
-//      }
-//    }
-//    .hidden-timeline{
-//      display: none;
-//      .close-timeline{
-//        display: inline-block;
-//        margin-top: 0;
-//      }
-//      .close-timeline:hover{
-//        cursor: pointer;
-//      }
-//      p{
-//        margin-left: 100px;
-//      }
-//    }
-//  }
-//}
-//.timeline-content:before{
-//  content: "";
-//    position: absolute;
-//    top: 5px;
-//    left: -11px;
-//    border-radius: 100%;
-//    border: 2px solid #4a4a4a;
-//    background-color: white;
-//    padding: 6px 6px;
-//}
 
-.modal {
-  display: none;
-}
-
+/* プロフィールレイアウト */
 .table-profile{
   p{
     display: inline;
@@ -72,7 +28,14 @@
     margin-left: 10px;
   }
 }
-.vanilla-modal .modal {
+
+/* モーダル */
+
+.modal{
+  display: none;
+}
+
+.vanilla-modal .modal{
   display: block;
   position: fixed;
   content: "";
@@ -91,14 +54,14 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.vanilla-modal .modal > * {
+.vanilla-modal .modal > *{
   display: inline-block;
   white-space: normal;
   vertical-align: middle;
   text-align: center;
 }
 
-.vanilla-modal .modal:before {
+.vanilla-modal .modal:before{
   display: inline-block;
   overflow: hidden;
   width: 0;
@@ -107,52 +70,47 @@
   content: "";
 }
 
-.vanilla-modal.modal-visible .modal {
+.vanilla-modal.modal-visible .modal{
   z-index: 99;
   opacity: 1;
   transition: opacity 0.2s;
 }
 
-.modal-inner {
+.modal-inner{
   position: relative;
   overflow: hidden;
   max-width: 90%;
   max-height: 90%;
   overflow-x: hidden;
   overflow-y: auto;
-  background: #fff;
+  background: $bg;
   z-index: -1;
   opacity: 0;
   transform: scale(0);
   transition: opacity 0.2s, transform 0.2s, z-index 0s 0.2s;
 }
-.modal-visible .modal-inner {
+
+.modal-visible .modal-inner{
   z-index: 100;
   opacity: 1;
   transform: scale(1);
   transition: opacity 0.2s, transform 0.2s;
 }
 
-[data-modal-close] {
+[data-modal-close]{
   position: absolute;
   z-index: 2;
   right: 0;
-  top: 0;
-  width: 25px;
-  height: 25px;
+  top: 5px;
+  right: 5px;
+  width: 45px;
+  height: 45px;
   line-height: 25px;
   font-size: 13px;
   cursor: pointer;
   text-align: center;
-  background: #fff;
-  box-shadow: -1px 1px 2px rgba(0,0,0,0.2);
+  background: $bg;
 }
-
-$bg: white;
-$black: #4a4a4a;
-$blue: #53a1eb;
-
-
 
 /* timeline */
 
@@ -172,6 +130,7 @@ $blue: #53a1eb;
     display: none;
   }
 }
+
 .date{
   margin-top: -10px;
   top: 50%;
@@ -180,6 +139,7 @@ $blue: #53a1eb;
   line-height: 20px;
   position: absolute;
 }
+
 .circle{
   margin-top: -10px;
   top: 50%;
@@ -193,6 +153,7 @@ $blue: #53a1eb;
   display: block;
   position: absolute;
 }
+
 .timeline-content{
   max-height: 20px;
   padding: 50px 20px 0;
@@ -231,6 +192,7 @@ $blue: #53a1eb;
     overflow: hidden;
   }
 }
+
 .timeline-label{
   font-size: 1.3em;
   position: absolute;
@@ -240,6 +202,7 @@ $blue: #53a1eb;
   left: 20px;
   transition: transform 0.2s linear;
 }
+
 .radio:checked{
   & + .relative{
     label{
@@ -265,9 +228,7 @@ $blue: #53a1eb;
   }
 }
 
-/* -------------------------------------
- * mobile phones (vertical version only)
- * ------------------------------------- */
+/* タイムラインレスポンシブ */
 //@media screen and (max-width: 767px){
 //  #timeline{
 //    margin-left: 0;
