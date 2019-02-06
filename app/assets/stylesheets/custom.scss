@@ -277,3 +277,19 @@ $blue: #53a1eb;
 //    display: none;
 //  }
 //}
+
+/* ポートフォリオレイアウト */
+.content-header{
+  margin-bottom: 24px;
+}
+.content{
+  overflow: hidden;
+  margin-bottom: 40px;
+  .content-items{
+    width: 50%;
+    float: left;
+  }
+  .item{
+    margin: 30px;
+  }
+}
