@@ -293,3 +293,11 @@ $blue: #53a1eb;
     margin: 30px;
   }
 }
+
+/* WindowsOS対応 */
+.win {
+  /* Windows (全バージョン)のみ */
+  .timeline-content{
+    overflow: hidden;
+  }
+}
