@@ -14,4 +14,5 @@
 //= require turbolinks
 //= stub particles.min.js
 //= stub particles_setting.js
+//= stub scroll.js
 //= require_tree .
