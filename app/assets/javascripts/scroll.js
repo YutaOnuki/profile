@@ -1,8 +1,11 @@
+let headH = document.getElementById('header').offsetHeight;
+document.body.style.marginTop = headH + "px";
+
+smoothLink(headH);
+
 function smoothLink(headH = 0) {
-  let headH = document.getElementById('header').offsetHeight;
-  document.body.style.marginTop = headH + "px";
-  const interval = 10;               //スクロール処理を繰り返す間隔
-  const divisor = 8;                  //近づく割合（数値が大きいほどゆっくり近く）
+  const interval = 7;               //スクロール処理を繰り返す間隔
+  const divisor = 4;                  //近づく割合（数値が大きいほどゆっくり近く）
   const range = (divisor / 2) + 1;    //どこまで近づけば処理を終了するか(無限ループにならないように divisor から算出)
   const links = document.querySelectorAll('a[href^="#"]');
 
@@ -36,4 +39,4 @@ function smoothLink(headH = 0) {
           })();
       });
   }
-};(headH);
+};
