@@ -13,10 +13,12 @@
   <body>
     <%= render "layouts/header" %>
     <div id="particles-js">
-      <%= yield %>
     </div>
+    <%= yield %>
+    <script>var modal = new VanillaModal.default();</script>
     <%= javascript_include_tag "scroll.js" %>
+    <%= javascript_include_tag "height.js" %>
     <%= javascript_include_tag "particles.min.js" %>
     <%= javascript_include_tag "particles_setting.js" %>
-  </body>
+    </body>
 </html>

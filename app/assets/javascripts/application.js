@@ -12,6 +12,7 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= stub height.js
 //= stub particles.min.js
 //= stub particles_setting.js
 //= stub scroll.js
