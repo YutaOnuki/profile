@@ -7,16 +7,19 @@ $blue: #53a1eb;
 #particles-js{
   position: relative;
   width: 100vw;
-  height: 3000px;
-  overflow: hidden
+  /*overflow: hidden*/
 }
 
 /* 全体レイアウト */
 .columns{
   position: absolute;
   width:90%;
-  top: 5%;
+  top: 15%;
   left: 5%;
+}
+
+.card{
+  border-radius: 10px;
 }
 
 /* プロフィールレイアウト */
